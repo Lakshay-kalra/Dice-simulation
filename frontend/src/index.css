@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .shake-anim {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0) rotate(-5deg); }
+  20%, 80% { transform: translate3d(2px, 0, 0) rotate(5deg); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0) rotate(-5deg); }
+  40%, 60% { transform: translate3d(4px, 0, 0) rotate(5deg); }
+}
+
+body {
+  @apply bg-slate-900 text-slate-100;
+}
